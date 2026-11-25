@@ -84,6 +84,13 @@ try:
 except ImportError:
     pass
 
+# OAG Agente Maestro unificado — integra deep reasoning, voice, vision,
+# perchance y provider gateway en un solo agente de OpenJarvis.
+try:
+    import openjarvis.agents.oag  # noqa: F401
+except ImportError:
+    pass
+
 # Hybrid local+cloud paradigm agents (Minions, Conductor, Archon, Advisors,
 # SkillOrchestra, ToolOrchestra). Each module registers under its own name
 # via @AgentRegistry.register(). Optional deps may make some unavailable.
