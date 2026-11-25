@@ -13,8 +13,8 @@ class WorkflowBuilder:
 
     Example:
         wf = (WorkflowBuilder("research_pipeline")
-              .add_agent("researcher", agent="orchestrator", tools=["web_search"])
-              .add_agent("summarizer", agent="simple")
+              .add_agent("researcher", agent="openjarvis", tools=["web_search"])
+              .add_agent("summarizer", agent="openjarvis")
               .connect("researcher", "summarizer")
               .build())
     """

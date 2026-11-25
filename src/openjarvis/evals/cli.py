@@ -925,7 +925,7 @@ def _run_agentic(
     if config.engine_key:
         builder.engine(config.engine_key)
     builder.model(config.model)
-    agent_name = config.agent_name or "orchestrator"
+    agent_name = config.agent_name or "openjarvis"
     builder.agent(agent_name)
     tool_list = config.tools or []
     if tool_list:

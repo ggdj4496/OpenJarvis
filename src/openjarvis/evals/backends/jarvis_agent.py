@@ -23,7 +23,7 @@ class JarvisAgentBackend(InferenceBackend):
     def __init__(
         self,
         engine_key: Optional[str] = None,
-        agent_name: str = "orchestrator",
+        agent_name: str = "openjarvis",
         tools: Optional[List[str]] = None,
         telemetry: bool = False,
         gpu_metrics: bool = False,

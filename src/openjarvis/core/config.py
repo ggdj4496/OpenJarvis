@@ -1132,7 +1132,7 @@ class ToolsConfig:
 class AgentConfig:
     """Agent harness settings — orchestration, tools, system prompt."""
 
-    default_agent: str = "simple"
+    default_agent: str = "openjarvis"
     max_turns: int = 10
     tools: str = ""  # comma-separated tool names
     objective: str = ""  # concise purpose for routing/learning/docs
@@ -1164,7 +1164,7 @@ class ServerConfig:
 
     host: str = "127.0.0.1"
     port: int = 8000
-    agent: str = "orchestrator"
+    agent: str = "openjarvis"
     model: str = ""
     workers: int = 1
     cors_origins: list = field(
@@ -1394,7 +1394,7 @@ class ChannelConfig:
 
     enabled: bool = False
     default_channel: str = ""
-    default_agent: str = "simple"
+    default_agent: str = "openjarvis"
     telegram: TelegramChannelConfig = field(default_factory=TelegramChannelConfig)
     discord: DiscordChannelConfig = field(default_factory=DiscordChannelConfig)
     slack: SlackChannelConfig = field(default_factory=SlackChannelConfig)
@@ -2208,7 +2208,7 @@ default = "{engine}"
 default_model = "{model}"
 
 [agent]
-default_agent = "simple"
+default_agent = "openjarvis"
 
 [tools]
 enabled = ["code_interpreter", "web_search", "file_read", "shell_exec"]
@@ -2348,7 +2348,7 @@ max_tokens = 1024
 # model = ""                   # empty = use [intelligence].default_model
 
 [agent]
-default_agent = "simple"
+default_agent = "openjarvis"
 max_turns = 10
 # tools = ""                   # Comma-separated tool names
 # objective = ""               # Concise purpose string
@@ -2390,7 +2390,7 @@ host = "127.0.0.1"
 # To serve other machines, configure an API key before using:
 # host = "0.0.0.0"
 port = 8000
-agent = "orchestrator"
+agent = "openjarvis"
 
 [learning]
 enabled = false
@@ -2423,7 +2423,7 @@ enabled = false
 
 [channel]
 enabled = false
-default_agent = "simple"
+default_agent = "openjarvis"
 
 # [channel.telegram]
 # bot_token = ""  # Or set TELEGRAM_BOT_TOKEN env var

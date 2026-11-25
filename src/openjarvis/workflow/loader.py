@@ -25,13 +25,13 @@ def load_workflow(path: str | Path) -> WorkflowGraph:
     [[workflow.nodes]]
     id = "researcher"
     type = "agent"
-    agent = "orchestrator"
+    agent = "openjarvis"
     tools = ["web_search"]
 
     [[workflow.nodes]]
     id = "summarizer"
     type = "agent"
-    agent = "simple"
+    agent = "openjarvis"
 
     [[workflow.edges]]
     source = "researcher"

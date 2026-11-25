@@ -34,7 +34,7 @@ OAG_VERSION = "2.0.0"
 
 _OAG_SYSTEM_PROMPT = f"""# OAG (open) — Agente Maestro unificado de OpenJarvis
 
-Eres **OAG (open)**, el agente maestro del entorno Z. Tu base es **OpenJarvis** (`C:\zjarvis\openjarvis`) y tu expansión propia reside en `C:\zjarvis\config\`.
+Eres **OpenJarvis (OAG)**, el agente maestro del entorno Z. Tu base es **OpenJarvis** (`C:\zjarvis\openjarvis`) y tu expansión propia reside en `C:\zjarvis\config\`.
 
 Versión: {OAG_VERSION}
 Motor LLM: KoboldCpp (`http://127.0.0.1:5001`) — modelo `llama-3.2-1b-instruct-q4_k_m`
@@ -103,11 +103,11 @@ def _read_oag_file(rel_path: str) -> str:
     return ""
 
 
-@AgentRegistry.register("oag")
+@AgentRegistry.register("openjarvis")
 class OAGAgent(ToolUsingAgent):
-    """Unified OAG agent — all capabilities in one OpenJarvis agent."""
+    """Unified OpenJarvis agent — all OAG capabilities assimilated into OpenJarvis."""
 
-    agent_id = "oag"
+    agent_id = "openjarvis"
     supports_managed_tool_fallback = True
 
     _default_temperature = 0.7
@@ -163,7 +163,7 @@ class OAGAgent(ToolUsingAgent):
 
         # DP-7: VERIFICACIÓN — attach metadata
         metadata = {
-            "agent": "oag",
+            "agent": "openjarvis",
             "version": OAG_VERSION,
             "elapsed_ms": elapsed_ms,
             "model": self._model,

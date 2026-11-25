@@ -153,7 +153,7 @@ def write_initial_config(
         f"{intelligence_section}\n"
         f"\n"
         f"[agent]\n"
-        f'default_agent = "simple"\n'
+        f'default_agent = "openjarvis"\n'
         f"\n"
         f"[tools]\n"
         f'enabled = ["code_interpreter", "web_search", '
